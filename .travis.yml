@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "10"
+serverices:
+  - postgresql
+before_script:
+  - psql -c 'create database travis_test;' -U postgres
